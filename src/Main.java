@@ -3,10 +3,10 @@
  */
 public class Main {
     public static void main(String [] args){
-        Node node1 = new Node(4);
-        node1.setHead(node1);
-        Node node2 = new Node(3);
-        node2.setHead(node1);
-
+        List list1 = new List("List 1");
+        list1.insertFront(1);
+        list1.insertBack(2);
+        list1.insertBack(3);
+        list1.print();
     }
 }

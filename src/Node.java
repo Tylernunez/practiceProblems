@@ -3,25 +3,18 @@
  */
 public class Node {
 
-    private Node head;
-
     private Node next;
 
     private int value;
 
-    private Node current;
+    private Node previous;
 
-    public Node getHead() {
-        return head;
-    }
-
-    public void setHead(Node head) {
-        this.head = head;
-    }
-
-    public Node(int value){
+    public Node(int value, Node next, Node previous){
         this.value = value;
+        this.next = next;
+        this.previous = previous;
     }
+
     public Node getNext(){
         return this.next;
     }
@@ -37,39 +30,14 @@ public class Node {
         this.value = value;
     }
 
-    public Node getCurrent(){
-        return this.current;
+
+    public Node getPrevious() {
+        return previous;
     }
 
-    public void setCurrent(Node current){
-        this.current = current;
-    }
-    public Node Reverse(){
-        return null;
+    public void setPrevious(Node previous) {
+        this.previous = previous;
     }
 
-    public Node insert(int value){
-        if(head.getNext() == null){
-            head.setNext(new Node(value));
-            return getHead();
-        }else{
-            setCurrent(head);
-            while(head.getNext() != null){
-                current.setNext(getNext());
-                if(current.getNext() == null){
-                    current.setNext(new Node(value));
-                    return getHead();
-                }
 
-            }
-        }
-        return null;
-    }
-    public void print(){
-        this.getHead();
-        setCurrent(this.getHead());
-        while(this.getCurrent().getNext() != null){
-            system.out.println()
-        }
-    }
 }
